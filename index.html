@@ -125,3 +125,24 @@ Portfolio: https://yael.pages.dev/
 </body>
 
 </html>
+<!-- Insert after the "BIN (or use pool)" label -->
+<div class="row">
+  <div style="flex:1;">
+    <label>Pick a real BIN (optional):</label>
+    <select id="binSelect" style="width:100%;">
+      <option value="">-- Custom BIN (type below) --</option>
+    </select>
+  </div>
+</div>
+
+<hr />
+<h3>📂 Upload Card List (File)</h3>
+<div id="dropZone" style="border:2px dashed #ccc; padding:20px; text-align:center; border-radius:5px; cursor:pointer;">
+  <p>Drag &amp; drop a <code>.txt</code> or <code>.csv</code> file here, or click to select.</p>
+  <input type="file" id="fileInput" accept=".txt,.csv" style="display:none;" />
+  <button type="button" onclick="document.getElementById('fileInput').click();">Choose File</button>
+</div>
+<p id="fileStatus"></p>
+
+<button id="applyPatternsBtn" disabled>Apply Discovered Patterns</button>
+<button id="resetPatternsBtn">Reset to Original Patterns</button>
